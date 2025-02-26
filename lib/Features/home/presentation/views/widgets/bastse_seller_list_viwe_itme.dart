@@ -1,4 +1,7 @@
+import 'package:book_st/Features/home/presentation/views/widgets/book_rating.dart';
+import 'package:book_st/constants.dart';
 import 'package:book_st/core/utils/assets.dart';
+import 'package:book_st/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class BastseSellerListViweItme extends StatelessWidget {
@@ -6,7 +9,7 @@ class BastseSellerListViweItme extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 150,
       child: Row(
         children: [
@@ -27,11 +30,42 @@ class BastseSellerListViweItme extends StatelessWidget {
           SizedBox(
             width: 20,
           ),
-          Column(
-            children: [
-              Text(AssetsData.titleText),
-              Text(AssetsData.titleText),
-            ],
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                    width: MediaQuery.of(context).size.width * .5,
+                    child: Text(
+                      "AssetsData.titleText  style: Styles.",
+                      style: Styles.textStyle20
+                          .copyWith(fontFamily: kGtSectraFine),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    )),
+                const SizedBox(
+                  width: 3,
+                ),
+                Text(
+                  "data sadd",
+                  style: Styles.textStyle14,
+                ),
+                const SizedBox(
+                  width: 3,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      "19.99#",
+                      style: Styles.textStyle20
+                          .copyWith(fontWeight: FontWeight.bold),
+                    ),
+                    Spacer(),
+                    BookRating(),
+                  ],
+                ),
+              ],
+            ),
           ),
         ],
       ),
