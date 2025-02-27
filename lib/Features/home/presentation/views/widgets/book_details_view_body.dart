@@ -1,4 +1,7 @@
 import 'package:book_st/Features/home/presentation/views/widgets/custom_book_details_appbar.dart';
+import 'package:book_st/Features/home/presentation/views/widgets/custom_list_view_item.dart';
+import 'package:book_st/Features/home/presentation/views/widgets/featured_books_list_view.dart';
+import 'package:book_st/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -6,11 +9,34 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         children: [
           CustomBookDetailsAppbar(),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: width * 0.21),
+            child: CustomListViewItem(),
+          ),
+          const SizedBox(
+            height: 43,
+          ),
+          Text(
+            'The Jungle Book',
+            style: Styles.textStyle30.copyWith(fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(
+            height: 6,
+          ),
+          Opacity(
+            opacity: .7,
+            child: Text(
+              'The Jungle Book',
+              style: Styles.textStyle18.copyWith(
+                  fontWeight: FontWeight.w500, fontStyle: FontStyle.italic),
+            ),
+          ),
         ],
       ),
     );
