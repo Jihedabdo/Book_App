@@ -49,4 +49,3 @@ class BookDetailsSection extends StatelessWidget {
     );
   }
 }
-
