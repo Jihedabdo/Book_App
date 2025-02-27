@@ -2,6 +2,7 @@ import 'package:book_st/Features/home/presentation/views/widgets/book_rating.dar
 import 'package:book_st/Features/home/presentation/views/widgets/books_action.dart';
 import 'package:book_st/Features/home/presentation/views/widgets/custom_book_details_appbar.dart';
 import 'package:book_st/Features/home/presentation/views/widgets/custom_list_view_item.dart';
+import 'package:book_st/Features/home/presentation/views/widgets/similar_books_list_viwe.dart';
 import 'package:book_st/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,7 @@ class BookDetailsViewBody extends StatelessWidget {
             child: CustomListViewItem(),
           ),
           const SizedBox(
-            height: 43,
+            height: 30,
           ),
           Text(
             'The Jungle Book',
@@ -45,9 +46,26 @@ class BookDetailsViewBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
           ),
           const SizedBox(
-            height: 37,
+            height: 35,
           ),
           const BooksAction(),
+          const SizedBox(
+            height: 40,
+          ),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'You Can also like',
+              style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w600),
+            ),
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          SimilarBooksListViwe(),
+          SizedBox(
+            height: 40,
+          ),
         ],
       ),
     );
