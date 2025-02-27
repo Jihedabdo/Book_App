@@ -6,8 +6,8 @@ import 'package:book_st/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class BastseSellerListViweItme extends StatelessWidget {
-  const BastseSellerListViweItme({super.key});
+class BookListViewItme extends StatelessWidget {
+  const BookListViewItme({super.key});
 
   @override
   Widget build(BuildContext context) {
