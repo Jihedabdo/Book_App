@@ -1,3 +1,4 @@
+import 'package:book_st/Features/home/presentation/views/widgets/book_rating.dart';
 import 'package:book_st/Features/home/presentation/views/widgets/custom_book_details_appbar.dart';
 import 'package:book_st/Features/home/presentation/views/widgets/custom_list_view_item.dart';
 import 'package:book_st/Features/home/presentation/views/widgets/featured_books_list_view.dart';
@@ -36,6 +37,12 @@ class BookDetailsViewBody extends StatelessWidget {
               style: Styles.textStyle18.copyWith(
                   fontWeight: FontWeight.w500, fontStyle: FontStyle.italic),
             ),
+          ),
+          const SizedBox(
+            height: 18,
+          ),
+          const BookRating(
+            mainAxisAlignment: MainAxisAlignment.center,
           ),
         ],
       ),
